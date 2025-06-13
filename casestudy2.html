@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrilio Case Study: Scaling Security for a Growing Startup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F5FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .icon-bg {
+             background-color: #E6F0FF;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .solution-step {
+            border-left: 3px solid #007BFF;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .solution-step::before {
+            content: '';
+            position: absolute;
+            left: -0.7rem;
+            top: 0;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 50%;
+            background-color: #007BFF;
+            border: 3px solid #F0F5FA;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-start items-center">
+             <div class="flex flex-col items-start">
+                <h1 class="text-3xl font-bold" style="color: #004AAD;">Entrilio</h1>
+                <p class="text-sm font-medium text-gray-500">Modern IT Solutions</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section class="text-center mb-12 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4" style="color: #004AAD;">Case Study: Scaling Security for a Growing Startup</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">How we built a SOC 2-ready security foundation for a Series A startup operating across North America.</p>
+        </section>
+
+        <section id="challenge" class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Challenge: Patchwork IT & Security Blind Spots</h2>
+                <p class="mt-2 text-gray-600">A 15-employee hybrid startup was grappling with device sprawl, inconsistent offboarding, and significant data risks.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">📱</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Device Sprawl</h3>
+                    <p class="text-gray-600">Self-managed laptops with no MDM or policy enforcement led to major inconsistencies.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🚪</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Offboarding Risk</h3>
+                    <p class="text-gray-600">Inconsistent offboarding left active accounts in SaaS apps, posing a serious data threat.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🔑</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Password Chaos</h3>
+                    <p class="text-gray-600">Passwords were scattered in browsers, Slack DMs, and spreadsheets, creating chaos.</p>
+                </div>
+                <div class="card p-6 text-center md:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                        <div class="text-center">
+                             <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">📁</span></div>
+                            <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Data Risk</h3>
+                            <p class="text-gray-600">No data loss prevention (DLP) or audit logging meant zero visibility into data handling.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🕵️</span></div>
+                            <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Security Blind Spots</h3>
+                            <p class="text-gray-600">A lack of monitoring or incident response procedures left the company vulnerable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-12 md:mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">Our Comprehensive Solution</h2>
+                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">We implemented a holistic security program covering devices, identity, culture, and compliance.</p>
+            </div>
+             <div class="w-full p-6 md:p-8 card">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="solution-step pb-6">
+                        <h4 class="font-bold text-xl mb-2" style="color: #004AAD;">Device Management</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Deployed Kandji (Mac) & Intune (Windows)</li>
+                            <li>Enforced encryption & OS updates</li>
+                            <li>Automated new hire device provisioning</li>
+                        </ul>
+                    </div>
+                    <div class="solution-step pb-6">
+                        <h4 class="font-bold text-xl mb-2" style="color: #004AAD;">Identity & Access</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Centralized SSO with Okta & Google</li>
+                            <li>Established role-based access control</li>
+                            <li>Automated deprovisioning workflows</li>
+                        </ul>
+                    </div>
+                    <div class="solution-step pb-6 md:pb-0">
+                        <h4 class="font-bold text-xl mb-2" style="color: #004AAD;">Security Posture</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Implemented 1Password for Teams & 2FA</li>
+                            <li>Audited all app permissions & API access</li>
+                            <li>Enabled Workspace audit logs & alerting</li>
+                        </ul>
+                    </div>
+                    <div class="solution-step">
+                        <h4 class="font-bold text-xl mb-2" style="color: #004AAD;">Culture & Compliance</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Introduced security awareness training</li>
+                            <li>Delivered clean policy documentation</li>
+                            <li>Provided quarterly health checks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Results: A Secure, Scalable Foundation</h2>
+                <p class="mt-2 text-gray-600">The startup is now fully managed, compliant, and ready for future growth and certification.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Total Device Compliance</h3>
+                     <p class="text-center text-gray-600 mb-4">From zero oversight to complete management, every device is now secure and compliant.</p>
+                    <div class="chart-container">
+                        <canvas id="deviceComplianceChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card p-6">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Offboarding Efficiency Gains</h3>
+                    <p class="text-center text-gray-600 mb-4">Manual, risky offboarding that took hours is now fully automated and complete in minutes.</p>
+                    <div class="chart-container">
+                        <canvas id="offboardingChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion" class="bg-white rounded-lg shadow-lg p-8">
+             <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #004AAD;">Ready for SOC 2 and Beyond</h2>
+                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">With a robust security foundation, the team can now pursue SOC 2 compliance, confident that no data is lost or left in dormant SaaS apps post-departure.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto p-6 text-center">
+            <p>&copy; 2025 Entrilio. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400">Modern IT Solutions for Growing Businesses</p>
+        </div>
+    </footer>
+    
+    <script>
+        const chartOptionsBase = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { labels: { color: '#374151', font: { size: 14 } } },
+                tooltip: {
+                    backgroundColor: '#004AAD',
+                    titleFont: { size: 16 },
+                    bodyFont: { size: 14 },
+                    padding: 12,
+                    cornerRadius: 6
+                }
+            }
+        };
+
+        new Chart(document.getElementById('deviceComplianceChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Managed & Compliant', 'Unmanaged'],
+                datasets: [{
+                    label: 'Device Status',
+                    data: [100, 0],
+                    backgroundColor: ['#007BFF', '#D1D5DB'],
+                    borderColor: ['#FFFFFF'],
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: { ...chartOptionsBase, cutout: '70%' }
+        });
+
+        new Chart(document.getElementById('offboardingChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Offboarding Time (Minutes)'],
+                datasets: [{
+                    label: 'Before (Manual)',
+                    data: [240],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 1
+                }, {
+                    label: 'After (Automated)',
+                    data: [5],
+                    backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                    borderColor: '#007BFF',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartOptionsBase,
+                scales: {
+                    y: { beginAtZero: true, ticks: { color: '#374151' } },
+                    x: { ticks: { color: '#374151' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
