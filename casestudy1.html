@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrilio Case Study: IT Security Enhancement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F5FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .icon-bg {
+             background-color: #E6F0FF;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .flowchart-step {
+            border-color: #007BFF;
+            color: #004AAD;
+        }
+        .flowchart-arrow {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-start items-center">
+             <div class="flex flex-col items-start">
+                <h1 class="text-3xl font-bold" style="color: #004AAD;">Entrilio</h1>
+                <p class="text-sm font-medium text-gray-500">Modern IT Solutions</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section class="text-center mb-12 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4" style="color: #004AAD;">Case Study: Securing a Growing Business</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">From high-risk operations to a secured and efficient powerhouse. Here's how we transformed a client's IT infrastructure.</p>
+        </section>
+
+        <section id="challenge" class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Challenge: An Unsecured Foundation</h2>
+                <p class="mt-2 text-gray-600">A small business with 7 employees faced significant risks due to a lack of formal IT infrastructure.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl">💻</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Unmanaged Devices</h3>
+                    <p class="text-gray-600">Personal and unmanaged devices created a wide-open door for security breaches and data loss.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl">📧</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Email Vulnerability</h3>
+                    <p class="text-gray-600">Without a dedicated, secure email system, the business was highly susceptible to phishing and malware.</p>
+                </div>
+                <div class="card p-6 text-center">
+                     <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl">⏳</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Outdated Systems</h3>
+                    <p class="text-gray-600">Inconsistent OS and software updates exposed the network to known, preventable vulnerabilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-12 md:mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Solution: Building a Digital Fortress</h2>
+                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">We implemented a multi-layered strategy to secure every aspect of the client's IT operations, creating a robust and managed environment.</p>
+            </div>
+             <div class="w-full p-6 md:p-8 card">
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-4">
+                    
+                    <div class="text-center">
+                        <div class="p-4 border-2 rounded-lg flowchart-step">
+                            <h4 class="font-bold">Device Management</h4>
+                            <p class="text-sm">Microsoft Intune</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:block text-4xl flowchart-arrow">→</div>
+                    <div class="block md:hidden text-4xl flowchart-arrow">↓</div>
+                    
+                    <div class="text-center">
+                        <div class="p-4 border-2 rounded-lg flowchart-step">
+                            <h4 class="font-bold">Email Security</h4>
+                            <p class="text-sm">Microsoft 365 & Defender</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block text-4xl flowchart-arrow">→</div>
+                     <div class="block md:hidden text-4xl flowchart-arrow">↓</div>
+
+                    <div class="text-center">
+                        <div class="p-4 border-2 rounded-lg flowchart-step">
+                            <h4 class="font-bold">Password Management</h4>
+                            <p class="text-sm">1Password</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block text-4xl flowchart-arrow">→</div>
+                     <div class="block md:hidden text-4xl flowchart-arrow">↓</div>
+
+                    <div class="text-center">
+                        <div class="p-4 border-2 rounded-lg flowchart-step">
+                            <h4 class="font-bold">System Updates</h4>
+                            <p class="text-sm">Regular Patching Routine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Transformation: Secure & Efficient</h2>
+                <p class="mt-2 text-gray-600">The implemented solutions brought dramatic, measurable improvements to security and operational efficiency.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Overall Risk Reduction</h3>
+                     <p class="text-center text-gray-600 mb-4">Centralized management and security protocols drastically minimized the company's exposure to threats.</p>
+                    <div class="chart-container">
+                        <canvas id="riskReductionChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card p-6">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Vulnerability Landscape: Before vs. After</h3>
+                    <p class="text-center text-gray-600 mb-4">A comparison of key vulnerability points shows a significant fortification of the company's defenses.</p>
+                    <div class="chart-container">
+                        <canvas id="vulnerabilityChart"></canvas>
+                    </div>
+                </div>
+                <div class="card p-6 lg:col-span-2">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Device Compliance and Patching Status</h3>
+                    <p class="text-center text-gray-600 mb-4">The shift from unmanaged, outdated systems to a fully managed and updated environment is stark.</p>
+                    <div class="chart-container h-96 max-h-[450px]">
+                        <canvas id="patchingStatusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion" class="bg-white rounded-lg shadow-lg p-8">
+             <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #004AAD;">A Secure Future</h2>
+                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">By addressing foundational IT issues, the business is no longer just surviving; it's positioned for secure and stable growth. Proactive IT management is not an expense—it's an essential investment in business resilience.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto p-6 text-center">
+            <p>&copy; 2025 Entrilio. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400">Modern IT Solutions for Growing Businesses</p>
+        </div>
+    </footer>
+    
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const chartOptionsBase = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#374151',
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#004AAD',
+                    titleFont: { size: 16 },
+                    bodyFont: { size: 14 },
+                    padding: 12,
+                    cornerRadius: 6
+                }
+            }
+        };
+
+        new Chart(document.getElementById('riskReductionChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Risk Mitigated', 'Remaining Exposure'],
+                datasets: [{
+                    label: 'Risk Level',
+                    data: [95, 5],
+                    backgroundColor: ['#007BFF', '#D1D5DB'],
+                    borderColor: ['#FFFFFF'],
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                ...chartOptionsBase,
+                cutout: '70%',
+                 plugins: {
+                    ...chartOptionsBase.plugins,
+                    title: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('vulnerabilityChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Data Breach Likelihood', 'Phishing Susceptibility', 'Unpatched Exploits', 'Password Weakness'],
+                datasets: [{
+                    label: 'Before',
+                    data: [85, 90, 80, 95],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointBackgroundColor: 'rgb(255, 99, 132)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(255, 99, 132)'
+                }, {
+                    label: 'After',
+                    data: [10, 5, 5, 5],
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderColor: '#007BFF',
+                    pointBackgroundColor: '#007BFF',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#007BFF'
+                }]
+            },
+            options: {
+                ...chartOptionsBase,
+                scales: {
+                    r: {
+                        angleLines: { color: '#D1D5DB' },
+                        grid: { color: '#E5E7EB' },
+                        pointLabels: { 
+                            color: '#1F2937', 
+                            font: { size: 12 }
+                        },
+                        ticks: {
+                           display: false,
+                           stepSize: 20
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+        
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        new Chart(document.getElementById('patchingStatusChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Operating Systems', 'Software Applications', 'Security Definitions'],
+                datasets: [
+                    {
+                        label: 'Before (Updated %)',
+                        data: [15, 30, 25],
+                        backgroundColor: '#FFB1C1',
+                        borderColor: 'rgb(255, 99, 132)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'After (Updated %)',
+                        data: [100, 100, 100],
+                        backgroundColor: '#80C5FF',
+                        borderColor: '#007BFF',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                ...chartOptionsBase,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            color: '#374151',
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#374151'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
