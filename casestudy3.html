@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrilio Case Study: Standardizing IT for a Mid-Sized Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F5FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .icon-bg {
+             background-color: #E6F0FF;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .flowchart-step {
+            border-color: #007BFF;
+            color: #004AAD;
+        }
+        .flowchart-arrow {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-start items-center">
+             <div class="flex flex-col items-start">
+                <h1 class="text-3xl font-bold" style="color: #004AAD;">Entrilio</h1>
+                <p class="text-sm font-medium text-gray-500">Modern IT Solutions</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section class="text-center mb-12 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4" style="color: #004AAD;">Case Study: Standardizing a Digital Agency's IT</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Transforming a reactive, overworked IT department into a proactive, scalable, and secure digital workplace.</p>
+        </section>
+
+        <section id="challenge" class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Challenge: Inconsistency and IT Burnout</h2>
+                <p class="mt-2 text-gray-600">A 40-employee agency had a single, reactive IT generalist struggling with manual processes and fragmented systems.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🛠️</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Manual Provisioning</h3>
+                    <p class="text-gray-600">Laptops were set up manually, leading to inconsistent configurations and wasted time.</p>
+                </div>
+                <div class="card p-6 text-center">
+                     <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🗂️</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Data Security Risks</h3>
+                    <p class="text-gray-600">Staff stored sensitive client data locally or in unprotected, scattered folders.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🧩</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">Fragmented Collaboration</h3>
+                    <p class="text-gray-600">SharePoint permissions were a mess and Teams was chronically underutilized.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 rounded-full icon-bg flex items-center justify-center mx-auto mb-4"><span class="text-4xl">🔥</span></div>
+                    <h3 class="text-xl font-bold mb-2" style="color: #004AAD;">IT Burnout</h3>
+                    <p class="text-gray-600">A single IT admin was handling everything reactively, from onboarding to vendor calls.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-12 md:mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">Our Solution: Automation and Standardization</h2>
+                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">We focused on automating core processes, restructuring collaboration tools, and augmenting the internal team.</p>
+            </div>
+             <div class="w-full p-6 md:p-8 card">
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-4">
+                    <div class="text-center"><div class="p-4 border-2 rounded-lg flowchart-step"><h4 class="font-bold">Onboarding Automation</h4><p class="text-sm">Intune Autopilot</p></div></div>
+                    <div class="hidden md:block text-4xl flowchart-arrow">→</div>
+                    <div class="block md:hidden text-4xl flowchart-arrow">↓</div>
+                    <div class="text-center"><div class="p-4 border-2 rounded-lg flowchart-step"><h4 class="font-bold">Collaboration Cleanup</h4><p class="text-sm">SharePoint & Teams Restructure</p></div></div>
+                    <div class="hidden md:block text-4xl flowchart-arrow">→</div>
+                     <div class="block md:hidden text-4xl flowchart-arrow">↓</div>
+                    <div class="text-center"><div class="p-4 border-2 rounded-lg flowchart-step"><h4 class="font-bold">Security & Compliance</h4><p class="text-sm">Defender & Purview</p></div></div>
+                    <div class="hidden md:block text-4xl flowchart-arrow">→</div>
+                     <div class="block md:hidden text-4xl flowchart-arrow">↓</div>
+                    <div class="text-center"><div class="p-4 border-2 rounded-lg flowchart-step"><h4 class="font-bold">Support Augmentation</h4><p class="text-sm">Entrilio Retainer</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="mb-12 md:mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #0062D8;">The Impact: A Proactive & Scalable Workplace</h2>
+                <p class="mt-2 text-gray-600">Automation and standardization freed up the internal team and secured the entire digital environment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">IT Workload Reduction</h3>
+                     <p class="text-center text-gray-600 mb-4">Automating onboarding and centralizing device management led to a massive 40% drop in IT workload.</p>
+                    <div class="chart-container">
+                        <canvas id="workloadChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card p-6">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Collaboration Tool Adoption</h3>
+                    <p class="text-center text-gray-600 mb-4">Usage shifted from scattered, insecure local files to a standardized, secure SharePoint and Teams structure.</p>
+                    <div class="chart-container">
+                        <canvas id="collaborationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion" class="bg-white rounded-lg shadow-lg p-8">
+             <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold" style="color: #004AAD;">From Reactive to Strategic</h2>
+                <p class="mt-2 text-gray-600 max-w-3xl mx-auto">The agency's internal IT team is no longer bogged down by reactive tasks. With client data secured and monitored, the business now operates with a truly scalable and secure digital workplace.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto p-6 text-center">
+            <p>&copy; 2025 Entrilio. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400">Modern IT Solutions for Growing Businesses</p>
+        </div>
+    </footer>
+    
+    <script>
+        const chartOptionsBase = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { labels: { color: '#374151', font: { size: 14 } } },
+                tooltip: {
+                    backgroundColor: '#004AAD',
+                    titleFont: { size: 16 },
+                    bodyFont: { size: 14 },
+                    padding: 12,
+                    cornerRadius: 6
+                }
+            }
+        };
+
+        new Chart(document.getElementById('workloadChart'), {
+            type: 'bar',
+            data: {
+                labels: ['IT Workload'],
+                datasets: [{
+                    label: 'Before',
+                    data: [100],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)'
+                }, {
+                    label: 'After (40% Reduction)',
+                    data: [60],
+                    backgroundColor: 'rgba(0, 123, 255, 0.5)'
+                }]
+            },
+            options: { ...chartOptionsBase, scales: { y: { beginAtZero: true, max: 100, ticks: { callback: value => value + '%' } } } }
+        });
+
+        new Chart(document.getElementById('collaborationChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Before', 'After'],
+                datasets: [
+                    {
+                        label: 'Local/Unmanaged',
+                        data: [60, 5],
+                        backgroundColor: '#FFB1C1'
+                    },
+                    {
+                        label: 'OneDrive (Personal)',
+                        data: [30, 15],
+                        backgroundColor: '#FFD6A5'
+                    },
+                    {
+                        label: 'SharePoint & Teams',
+                        data: [10, 80],
+                        backgroundColor: '#80C5FF'
+                    }
+                ]
+            },
+            options: {
+                ...chartOptionsBase,
+                scales: {
+                    y: { stacked: true, beginAtZero: true, max: 100, ticks: { callback: value => value + '%' } },
+                    x: { stacked: true, ticks: { color: '#374151' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
